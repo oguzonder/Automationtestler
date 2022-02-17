@@ -26,11 +26,27 @@ public class LoginPage {
     @FindBy (xpath = "(//*[@name=\"email\"])[2]")
     public WebElement emailBox;
 
+    @FindBy(name="password")
+    public WebElement passwordBox;
+
+    @FindBy(xpath = "(//h2)[1]")
+    public WebElement loginYourAccountText;
+
     @FindBy(xpath = "(//*[@type= 'submit'])[2]")
     public WebElement accountCreatSignupButton;
+
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//a[contains(text(),' Logout')]")
+    public WebElement logoutButton;
 
     @FindBy(xpath = "//b[contains (text(),'Enter Account Information')]")
     public WebElement createAccountPageVerification;
 
+    @FindBy(xpath="(//p)[1]")
+    public WebElement existingEmailVerification;
 
+    @FindBy(xpath = "(//p)[1]")   //  //p[contains(text(),'password is incorrect')]
+    public WebElement negativeLoginText;
 }
