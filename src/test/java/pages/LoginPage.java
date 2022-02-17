@@ -23,11 +23,11 @@ public class LoginPage {
     @FindBy(name= "name")
     public WebElement nameBox;
 
-    @FindBy (xpath = "(//*[@name=\"email\"])[2]")
-    public WebElement emailBox;
+    @FindBy(css = "[type=\"password\"]")
+    public WebElement loginPasswordBox;
 
-    @FindBy(name="password")
-    public WebElement passwordBox;
+    @FindBy(css = "[data-qa=\"login-email\"]")
+    public WebElement loginemailElement;
 
     @FindBy(xpath = "(//h2)[1]")
     public WebElement loginYourAccountText;

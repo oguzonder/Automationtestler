@@ -16,12 +16,3 @@ Feature: Login_user_With_Excel
 
   Scenario: TC06_Login_User_With_Wrong_email_and_password_with_Excel
   (Excel kullanarak yanlis e-posta ve sifre ile kullanici oturum acma)
-
-    When kullanici tarayiciyi baslatir
-    Then kullanici anasayfaya gider
-    Then ana sayfanin gorunur oldugunu test eder
-    Then kullanici signup-login butonuna tiklar
-    Then kullanicinin Login to your account yazisinin gorunur oldugunu test eder
-    Then kullanici yanlis email ve sifreyi excel ile girer
-    Then kullanici Your email or password is incorrect! yazisinin goruldugunu test eder
-

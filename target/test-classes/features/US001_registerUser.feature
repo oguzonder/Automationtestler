@@ -20,5 +20,10 @@ Feature: Register_User_Functionality
     Then kullanici Create Account butonuna tiklar
     Then kullanici hesabin olustugunu dogrular
 
-
+@delete
   Scenario: TC03_delete_account (hesap silme)
+    When kullanici Continue butonuna tiklar
+    Then kullanici oturum actigini dogrulamasi gerekir(Logged in as username)
+    Then kullanici Delete Account butonuna tiklar
+    Then kullanici hesabin silindigini test eder
+

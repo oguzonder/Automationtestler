@@ -40,7 +40,7 @@ public class RegisterUserStepDefs {
 
     @When("kullanici olarak isim ve maili girer")
     public void kullaniciOlarakIsimVeMailiGirer() {
-        mainPageFunctionalities.nameBox.sendKeys("suat");
+        mainPageFunctionalities.nameBox.sendKeys("mehmet");
         mainPageFunctionalities.emailBox.sendKeys(Faker.instance().internet().emailAddress());
 
     }

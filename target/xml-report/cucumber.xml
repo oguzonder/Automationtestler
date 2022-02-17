@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.061"/>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.469">
+    <testcase classname="Login_user_correct" name="TC04_Login_User_With_Correct_email_and_password" time="0.101">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[When kullanici tarayiciyi baslatir..........................................passed
+Then kullanici anasayfaya gider.............................................passed
+Then ana sayfanin gorunur oldugunu test eder................................passed
+Then kullanici signup-login butonuna tiklar.................................passed
+Then kullanicinin Login to your account yazisinin gorunur oldugunu test eder.undefined
+Then kullanici dogru email ve sifreyi girer.................................skipped
+Then kullanici login butonuna tiklar........................................skipped
+Then kullanici oturum actigini test eder(Logged in as username).............skipped
+Then kullanici logout butonuna basar........................................skipped
+]]>
+        </failure>
+    </testcase>
+</testsuite>

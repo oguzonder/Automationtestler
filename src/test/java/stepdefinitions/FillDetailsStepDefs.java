@@ -31,7 +31,7 @@ public class FillDetailsStepDefs {
     }
     @Then("kullanici ayrintilari \\(ikinci bolum) doldurur")
     public void kullanici_ayrintilari_ikinci_bolum_doldurur() {
-        fillDetailsPage.firstNameBox.sendKeys("suat");
+        fillDetailsPage.firstNameBox.sendKeys("mehmet");
         fillDetailsPage.lastNameBox.sendKeys(Faker.instance().name().lastName());
         fillDetailsPage.companyBox.sendKeys("techproeducation");
         fillDetailsPage.addressBox.sendKeys(Faker.instance().address().fullAddress());
