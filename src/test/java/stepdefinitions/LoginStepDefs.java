@@ -9,6 +9,12 @@ import java.util.List;
 import java.util.Map;
 
 public class LoginStepDefs {
+    String path = "src/test/resources/testData/testData.xlsx";
+    String sheetName = "Sayfa1";
+    ExcelUtil excelUtil =new ExcelUtil(path,sheetName);
+
+    List<Map<String, String>> loginData = excelUtil.getDataList();
+
     LoginPage loginPage=new LoginPage();
 
     //steps
@@ -59,15 +65,27 @@ public class LoginStepDefs {
 
     @Then("kullanici dogru email ve sifreyi excel ile girer")
     public void kullaniciDogruEmailVeSifreyiExcelIleGirer() {
-        String path = "src/test/resources/testData/testData.xlsx";
-        String sheetName = "Sayfa1";
-        ExcelUtil excelUtil =new ExcelUtil(path,sheetName);
+    //   String path = "src/test/resources/testData/testData.xlsx";
+    //   String sheetName = "Sayfa1";
+    //   ExcelUtil excelUtil =new ExcelUtil(path,sheetName);
 
-        List<Map<String, String>> loginData = excelUtil.getDataList();
+    //   List<Map<String, String>> loginData = excelUtil.getDataList();
 
         loginPage.loginemailElement.sendKeys(loginData.get(0).get("Email"));
         loginPage.loginPasswordBox.sendKeys(loginData.get(0).get("Password"));
 
 
+    }
+
+    @Then("kullanici yanlis email ve sifreyi excel ile girer")
+    public void kullaniciYanlisEmailVeSifreyiExcelIleGirer() {
+        loginPage.loginemailElement.sendKeys(loginData.get(2).get("Email")); //bu satirlarda data yok bos
+        loginPage.loginPasswordBox.sendKeys(loginData.get(2).get("Password")); //bu satirlarda data yok bos
+    }
+
+    @Then("kullanici Your email or password is incorrect! yazisinin goruldugunu test eder")
+    public void kullaniciYourEmailOrPasswordIsIncorrectYazisininGoruldugunuTestEder() {
+
+        Assert.assertTrue(loginPage.negativeLoginText.isDisplayed());
     }
 }
