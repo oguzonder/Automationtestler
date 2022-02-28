@@ -67,7 +67,7 @@ public class Driver {
                     break;
             }
         }
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();  //alertli soruda burasi yoruma alininca Ok butona basiyor
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         return driver;
     }

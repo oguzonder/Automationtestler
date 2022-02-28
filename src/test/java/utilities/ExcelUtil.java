@@ -42,7 +42,7 @@ public class ExcelUtil {
             Map<String, String> rowMap = new HashMap<String, String>();
             for (Cell cell :row) {
                 int columnIndex = cell.getColumnIndex();
-                rowMap.put(columns.get(columnIndex).trim(), cell.toString().trim());
+                rowMap.put(columns.get(columnIndex).trim(), cell.toString().trim()); //excel den aldigi veride bosluk varsa temizler
             }
             data.add(rowMap);
         }

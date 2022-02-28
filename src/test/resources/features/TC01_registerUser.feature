@@ -1,7 +1,7 @@
-@US01
-Feature: Register_User_Functionality
+@TC01
+Feature: Register User Functionality
   @register
-  Scenario: TC01_register_page (kayit sayfasi)
+  Scenario: TC01_a_register_page (kayit sayfasi)
     When kullanici tarayiciyi baslatir
     Then kullanici anasayfaya gider
     Then ana sayfanin gorunur oldugunu test eder
@@ -9,7 +9,7 @@ Feature: Register_User_Functionality
     And kullanici,New User Signup! in gorunur oldugunu test eder
 
 @filldetails
-  Scenario: TC02_signup_user (ilk kayit)
+  Scenario: TC01_b_signup_user (ilk kayit)
     When kullanici olarak isim ve maili girer
     Then signup butonuna tiklar
     Then acilan sayfada ENTER ACCOUNT INFORMATION yazisinn gorunur oldugunu test eder
@@ -21,7 +21,7 @@ Feature: Register_User_Functionality
     Then kullanici hesabin olustugunu dogrular
 
 @delete
-  Scenario: TC03_delete_account (hesap silme)
+  Scenario: TC01_c_delete_account (hesap silme)
     When kullanici Continue butonuna tiklar
     Then kullanici oturum actigini dogrulamasi gerekir(Logged in as username)
     Then kullanici Delete Account butonuna tiklar

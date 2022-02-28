@@ -79,8 +79,8 @@ public class LoginStepDefs {
 
     @Then("kullanici yanlis email ve sifreyi excel ile girer")
     public void kullaniciYanlisEmailVeSifreyiExcelIleGirer() {
-        loginPage.loginemailElement.sendKeys(loginData.get(2).get("Email")); //bu satirlarda data yok bos
-        loginPage.loginPasswordBox.sendKeys(loginData.get(2).get("Password")); //bu satirlarda data yok bos
+        loginPage.loginemailElement.sendKeys(loginData.get(1).get("Email")); //bu satirlardaki data invalid
+        loginPage.loginPasswordBox.sendKeys(loginData.get(1).get("Password")); //bu satirlardaki data invalid
     }
 
     @Then("kullanici Your email or password is incorrect! yazisinin goruldugunu test eder")
