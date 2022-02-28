@@ -1,6 +1,6 @@
 Feature: Test cases page
   @verifytc
-  Scenario: TC07_verify_Test_cases_page
+  Scenario: TC07_verify Test cases page
             (Testcase pageleri dogrulama)
 
     When kullanici tarayiciyi baslatir

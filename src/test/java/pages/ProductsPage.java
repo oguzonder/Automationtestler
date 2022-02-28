@@ -48,11 +48,11 @@ public class ProductsPage {
     public List<WebElement> productInformationList;
 
     @FindBy (xpath = "//*[@class='fa fa-plus-square']")
-    public WebElement viewProductHomePage;
+    public List<WebElement> viewProductHomePage;
 
-
+    //TC13
     @FindBy (id = "quantity")
-    public WebElement quatityBox;
+    public WebElement quantityBox;
 
     @FindBy(xpath = "//*[@type='button']")
     public WebElement addToCartButtonProduct;
@@ -62,6 +62,6 @@ public class ProductsPage {
 
 
     @FindBy(xpath = "//*[@class='disabled']")
-    public WebElement quatityBoxInChart;
+    public WebElement quantityBoxInCart;
 
 }

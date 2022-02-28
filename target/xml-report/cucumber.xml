@@ -1,17 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="78.203">
-    <testcase classname="Products page feature" name="TC08_verify_all_products_product_detail_page" time="77.969">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="26.404">
+    <testcase classname="TC14_Place Order Register while Checkout" name="C14_Place Order Register while Checkout" time="26.162">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//b[contains (text(),'Enter Account Information')]&quot;}&#10;  (Session info: chrome=98.0.4758.102)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'DESKTOP-PF5D82C', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [24067f746037cf19e3e7234a7721839e, findElement {using=xpath, value=//b[contains (text(),'Enter Account Information')]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52610}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52610/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 24067f746037cf19e3e7234a7721839e" type="org.openqa.selenium.NoSuchElementException">
             <![CDATA[When kullanici tarayiciyi baslatir..........................................passed
 Then kullanici anasayfaya gider.............................................passed
-Then ana sayfanin gorunur oldugunu test eder................................passed
-Then kullanici Products butonuna tiklar.....................................passed
-Then kullanici ALL PRODUCTS sayfasina basariyla yonlendirildigini test eder.passed
-Then kullanici urun listesini gorur.........................................passed
-Then kullanici ilk urunde View Product a tiklar.............................passed
-Then kullanici, urun detay sayfasina yonlendirilir..........................passed
-Then kullanici ayrintilarin(urun adi, kategori, fiyat, bulunabilirlik, durum, marka) gorunur oldugunu test eder.passed
+Then kullanici sepete urun ekler............................................passed
+Then kullanici continue shopping butona tiklar..............................passed
+Then kullanici anasayfadaki cart butona tiklar..............................passed
+Then kullanici sepet sayfasina urunun eklendigini test eder.................passed
+And kullanici sayfadaki Proceed To Checkout a tiklar........................passed
+And kullanici acilan pencerede Register-Login e tiklar......................passed
+And kullanici New User Signup daki name ve email bilgilerini girer..........passed
+And kullanici signup butona tiklar..........................................passed
+Then acilan sayfada ENTER ACCOUNT INFORMATION yazisinn gorunur oldugunu test eder.failed
+Then kullanici ayrintilari (birinci bolum) doldurur.........................skipped
+Then kullanici Sign up for our newsletter! checkbox ini secer...............skipped
+Then kullanici Receive special offers from our partners! checkbox ini secer.skipped
+Then kullanici ayrintilari (ikinci bolum) doldurur..........................skipped
+Then kullanici Create Account butonuna tiklar...............................skipped
+Then kullanici hesabin olustugunu dogrular..................................skipped
+When kullanici Continue butonuna tiklar.....................................skipped
+Then kullanici oturum actigini dogrulamasi gerekir(Logged in as username)...skipped
+And kullanici anasayfadaki cart butona tiklar...............................skipped
+And kullanici sayfadaki Proceed To Checkout a tiklar........................skipped
+And kullanici adres detaylarini ve siparisini gorur.........................skipped
+And kullanici description in comment text areaya yorum girer ve place order a tiklar.skipped
+And kullanici odeme bilgilerini; Name on Card, Card Number, CVC, Expiration date doldurur.skipped
+And kullanici Pay and Confirm Order butona tiklar...........................skipped
+And kullanici success message Your order has been placed successfully.......skipped
+And kullanici Delete Account butana tiklar..................................skipped
+Then kullanici hesabin silindigini test eder................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//b[contains (text(),'Enter Account Information')]"}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'DESKTOP-PF5D82C', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [24067f746037cf19e3e7234a7721839e, findElement {using=xpath, value=//b[contains (text(),'Enter Account Information')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\asus\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52610}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52610/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 24067f746037cf19e3e7234a7721839e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy21.isDisplayed(Unknown Source)
+	at stepdefinitions.RegisterUserStepDefs.acilanSayfadaENTERACCOUNTINFORMATIONYazisinnGorunurOldugunuTestEder(RegisterUserStepDefs.java:56)
+	at ✽.acilan sayfada ENTER ACCOUNT INFORMATION yazisinn gorunur oldugunu test eder(file:///C:/Users/asus/IdeaProjects/practiceCucumber_automationexercise/src/test/resources/features/TC14_placeOrder_checkOut.feature:15)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>

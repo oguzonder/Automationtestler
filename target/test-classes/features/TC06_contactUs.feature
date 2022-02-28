@@ -1,6 +1,6 @@
 Feature: User contactUs with fill form
   @contact
-  Scenario: TC06_User_can_contact_us
+  Scenario: TC06_User can contact us
             (Kullanicinin bizimle iletisime gecebilmesi)
 
     When kullanici tarayiciyi baslatir
