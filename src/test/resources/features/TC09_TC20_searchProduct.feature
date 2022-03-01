@@ -1,7 +1,7 @@
 @search_product
 Feature: Search product
   @search_product_verify
-  Scenario: TC_09 search product verify
+  Scenario: TC_20 search product verify
             (aranan urunu dogrulama)
 
     When kullanici tarayiciyi baslatir

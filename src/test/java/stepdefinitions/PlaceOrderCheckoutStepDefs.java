@@ -15,7 +15,6 @@ import java.util.Random;
 public class PlaceOrderCheckoutStepDefs {
 
     PlaceOrderCheckoutPage placeOrderCheckoutPage= new PlaceOrderCheckoutPage();
-    ProductsPage productsPage=new ProductsPage();
     SubscriptionPage subscriptionPage=new SubscriptionPage();
     MainPageFunctionalities mainPageFunctionalities= new MainPageFunctionalities();
 
@@ -31,6 +30,7 @@ public class PlaceOrderCheckoutStepDefs {
     public void kullanici_anasayfadaki_cart_butona_tiklar() {
         placeOrderCheckoutPage.cartButtonHomePage.click();
     }
+
     @Then("kullanici sepet sayfasina urunun eklendigini test eder")
     public void kullanici_sepet_sayfasina_urunun_eklendigini_test_eder() {
         Assert.assertEquals(1,subscriptionPage.productsInCart.size());

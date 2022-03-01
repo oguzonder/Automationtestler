@@ -64,4 +64,83 @@ public class ProductsPage {
     @FindBy(xpath = "//*[@class='disabled']")
     public WebElement quantityBoxInCart;
 
+    //TC17
+
+    @FindBy(xpath = "//a[@class='cart_quantity_delete']" )
+    public WebElement deleteButton_first;
+
+    @FindBy(xpath = "//*[@class='fa fa-times']")
+    public WebElement deleteButton_second;
+
+    @FindBy(xpath = "//*[text()='Cart is empty!']")
+    public  WebElement cartEmptyText;
+
+    //TC18
+
+    @FindBy (xpath = "//*[text()='Category']")
+    public WebElement categoryText;
+
+    @FindBy (xpath = "//*[@class='collapsed']")
+    public List<WebElement> categories;  //women, men, kids
+
+    @FindBy(xpath = "//a[@href='#Women']")
+    public WebElement womanCategory;
+
+    @FindBy(xpath = "(//div[@class='panel-body'])[1]")
+    public List<WebElement> womenSubCategories;
+
+    @FindBy (xpath = "//a[@href='/category_products/1']")
+    public  WebElement dressProducts;
+
+    @FindBy (xpath = "//a[@href='/category_products/2']")
+    public  WebElement topsProducts;
+
+    @FindBy (xpath = "//a[@href='/category_products/7']")
+    public  WebElement sareeProducts;
+
+    @FindBy(xpath = "//h2[@class='title text-center']")
+    public WebElement productText;
+    //3 subCategory icinde textler farkli olsa da locateleri ayni..1 kere yazmak yeterli..
+    //ayni zamanda men kategorileri acildiginda da textler ayni locate e sahip
+    //brands de secilen kategorileri acildiginda text ayni locate e sahip
+
+    @FindBy (xpath = "//a[@href='#Men']")
+    public WebElement menCategory;
+
+    @FindBy(xpath = "(//div[@class='panel-body'])[2]")
+    public List<WebElement> menSubCategories;
+
+    @FindBy (xpath = "//a[@href='/category_products/3']")
+    public WebElement TshirtsProducts;
+
+    @FindBy(xpath = "//a[@href='/category_products/6']")
+    public WebElement jeansProduct;
+
+    //TC19
+
+    @FindBy(xpath = "//h2[.='Brands']")
+    public WebElement brands;
+
+    @FindBy(xpath = "//div[@class='brands-name']")
+    public List<WebElement> brandsList;
+    // markalari liste olarak alamadim, liste olarak random icinden sectirdim ama size: 1 cikiyor, sanirim siteden kaynakli.
+    // .bu yuzden kodu baside indirgeyerek revize ettim
+
+    @FindBy(xpath = "//a[@href='/product_details/1']")
+    public WebElement viewProductButtonfirst;
+
+    @FindBy (xpath = "//a[@href='/brand_products/Polo']")
+    public WebElement poloProducts;
+
+    @FindBy(xpath = "//*[text()='Brand - Polo Products']")
+    public WebElement poloProductsText;
+
+    @FindBy (xpath = "//*[text()='Brand - H&M Products']")
+    public WebElement hmProductsText;
+
+    @FindBy(xpath = "//a[@href='/brand_products/H&M']")
+    public WebElement hmproducts;
+
+
+
 }
