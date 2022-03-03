@@ -39,3 +39,5 @@ import org.junit.runner.RunWith;
 public class Runner {
 
 }
+
+//PROJE NOTU :  Testler in hepsi PASS, ancak bazen nadiren de FAIL olabilir, bu siteden kaynaklidir

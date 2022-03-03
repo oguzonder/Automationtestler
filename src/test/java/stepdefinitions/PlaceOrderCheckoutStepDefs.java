@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.MainPageFunctionalities;
 import pages.PlaceOrderCheckoutPage;
-import pages.ProductsPage;
 import pages.SubscriptionPage;
 import utilities.ReusableMethods;
 

@@ -20,7 +20,7 @@ Feature: TC14_Place Order Register Before Checkout
     Then kullanici oturum actigini dogrulamasi gerekir(Logged in as username)
     Then kullanici sepete urun ekler
     Then kullanici view cart butona tiklar
-    Then kullanici cart page is gorunur oldugunu test eder
+    Then kullanici cart page in gorunur oldugunu test eder
     And kullanici sayfadaki Proceed To Checkout a tiklar
     And kullanici adres detaylarini ve siparisini gorur
     And kullanici description in comment text areaya yorum girer ve place order a tiklar

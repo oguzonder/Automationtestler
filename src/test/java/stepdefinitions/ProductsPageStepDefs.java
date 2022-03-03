@@ -1,18 +1,15 @@
 package stepdefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.ProductsPage;
 import pages.SubscriptionPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class ProductsPageStepDefs {
@@ -33,6 +30,7 @@ public class ProductsPageStepDefs {
     public void kullanici_all_products_sayfasina_basariyla_yonlendirildigini_test_eder() {
         Assert.assertTrue(productsPage.allProductsText.isDisplayed());
     }
+
 
     @Then("kullanici urun listesini gorur")
     public void kullanici_urun_listesini_gorur() {
@@ -257,4 +255,59 @@ public class ProductsPageStepDefs {
         }
 
 
+    //TC21_Add Review on Product
+
+    @Then("kullanici View Product butonuna tiklar")
+    public void kullaniciViewProductButonunaTiklar() {
+        productsPage.viewProductButton1.click();
+    }
+
+    @Then("kullnaici Write Your Review gorunur oldugunu test eder")
+    public void kullnaiciWriteYourReviewGorunurOldugunuTestEder() {
+        Assert.assertTrue(productsPage.productReview.isDisplayed());
+    }
+
+    @Then("kullanici name, email ve review bilgilerini gider")
+    public void kullaniciNameEmailVeReviewBilgileriniGider() {
+        productsPage.nameBox.sendKeys(Faker.instance().name().fullName());
+        productsPage.emailBox.sendKeys(Faker.instance().internet().emailAddress());
+        productsPage.reviewArea.sendKeys("I love your products...");
+    }
+
+    @Then("kullanici yorum gondermek icin Submit butonuna tiklar")
+    public void kullaniciYorumGondermekIcinSubmitButonunaTiklar() {
+        productsPage.submitButton.click();
+    }
+
+    @Then("kullanici Thank you for your review mesajinin gorunur oldugunu test eder")
+    public void kullaniciThankYouForYourReviewMesajininGorunurOldugunuTestEder() {
+
+        Assert.assertTrue(productsPage.successMessage.isDisplayed());
+    }
+
+    //TC22_Add to Cart of from Recommended Items
+
+    @Then("kullanici sayfada scroll down yapar")
+    public void kullaniciSayfadaScrollDownYapar() {
+        ReusableMethods.scrollToElement(productsPage.recommendedItems);
+    }
+
+    @Then("kullanici RECOMMENDED ITEMS in gorunur oldugunu test eder")
+    public void kullaniciRECOMMENDEDITEMSInGorunurOldugunuTestEder() {
+        Assert.assertTrue(productsPage.recommendedItems.isDisplayed());
+
+    }
+
+    @Then("kullanici onerilen urun icin Add To Cart a tiklar")
+    public void kullaniciOnerilenUrunIcinAddToCartATiklar() {
+        Driver.wait(3);
+        productsPage.recommendedAddToCart.click();
+        Driver.wait(3);
+    }
+
+
+    @Then("kullanici sonrasinda view cart butona tiklar")
+    public void kullaniciSonrasindaViewCartButonaTiklar() {
+        productsPage.viewCart.click();
+    }
 }

@@ -1,7 +1,20 @@
-@search_product
 Feature: Search product
+
+  @search_product
+  Scenario: TC_09 search product
+  (aranan urunu dogrulama)
+
+    When kullanici tarayiciyi baslatir
+    Then kullanici anasayfaya gider
+    Then ana sayfanin gorunur oldugunu test eder
+    Then kullanici Products butonuna tiklar
+    Then kullanici ALL PRODUCTS sayfasina basariyla yonlendirildigini test eder
+    And kullanici arama girisine urun adini girer ve arama dugmesine tiklar
+    And kullanici SEARCHED PRODUCTS gorunur oldugunu test eder
+    And aramayla ilgili tum urunlerin gorunur oldugunu test eder
+
   @search_product_verify
-  Scenario: TC_09 search product verify
+  Scenario: TC_20 search product verify
             (aranan urunu dogrulama)
 
     When kullanici tarayiciyi baslatir
@@ -11,8 +24,7 @@ Feature: Search product
     Then kullanici ALL PRODUCTS sayfasina basariyla yonlendirildigini test eder
     And kullanici arama girisine urun adini girer ve arama dugmesine tiklar
     And kullanici ilk urune hover over yapar ve tiklayarak sepete ekler
-    And kullanici product page de iken cart butona tiklar
-    Then kullanici cart page is gorunur oldugunu test eder
+    And kullanici continue shopping butona tiklar
     And kullanici signup-login butonuna tiklar
     Then kullanicinin Login to your account yazisinin gorunur oldugunu test eder
     Then kullanici dogru email ve sifreyi girer

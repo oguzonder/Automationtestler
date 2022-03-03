@@ -18,6 +18,12 @@ public class SearchProductsPage {
     @FindBy(xpath="//h2[@class='title text-center']")
     public WebElement searchedProductsText;
 
+    @FindBy (xpath = "//*[@class='active']")
+    public WebElement shoppingCartText;
+
+    @FindBy (xpath = "//*[@class='fa fa-shopping-cart']")
+    public WebElement cartButtonHomePage;
+
     @FindBy(xpath = "//input[@class= 'form-control input-lg']")
     public WebElement searchBox;
 
@@ -26,4 +32,7 @@ public class SearchProductsPage {
 
     @FindBy(linkText = "View Cart")
     public WebElement viewChart;
+
+    @FindBy(xpath = "//p[.='Blue Top']")
+    public WebElement blueTop;
 }

@@ -142,5 +142,41 @@ public class ProductsPage {
     public WebElement hmproducts;
 
 
+    //TC21
+
+    @FindBy(xpath="//a[@href='#reviews']")
+    public WebElement productReview;
+
+    @FindBy(xpath="//input[@id='name']")
+    public WebElement nameBox;
+
+    @FindBy(xpath="//input[@id='email']")
+    public WebElement emailBox;
+
+    @FindBy(xpath="//textarea[@id='review']")
+    public WebElement reviewArea;
+
+    @FindBy(xpath="//button[@id='button-review']")
+    public WebElement submitButton;
+
+    @FindBy(xpath="//a[@href='/product_details/4']")
+    public WebElement productDetail;
+
+    @FindBy(xpath="//div[@class='alert-success alert']")
+    public WebElement successMessage;
+
+    //TC22
+
+    @FindBy(xpath = "//*[text()='recommended items']")
+    public WebElement recommendedItems;
+
+    @FindBy(xpath = "(//*[@class='btn btn-default add-to-cart'])[72]")
+    public WebElement recommendedAddToCart;
+
+    @FindBy(id="cart_info")
+    public WebElement productInChart;
+
+    @FindBy(xpath= "(//a[@href='/view_cart'])[2]")
+    public WebElement viewCart;
 
 }
