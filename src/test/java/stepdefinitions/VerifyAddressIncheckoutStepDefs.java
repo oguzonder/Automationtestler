@@ -44,5 +44,4 @@ public class VerifyAddressIncheckoutStepDefs {
         Assert.assertTrue(verifyAddressIncheckoutPage.addressInvoice.getText().contains(city));
     }
 
-
 }
