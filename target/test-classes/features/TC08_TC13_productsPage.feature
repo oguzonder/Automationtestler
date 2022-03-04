@@ -1,5 +1,5 @@
 Feature: Products page feature
-  @verifyAllProduct
+  @verifyAllProduct  @vip
   Scenario: TC08_verify all products product detail page
             (Tum urunleri dogrulama ve urun detay sayfasi)
 

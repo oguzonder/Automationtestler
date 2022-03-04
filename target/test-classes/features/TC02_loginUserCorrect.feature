@@ -1,5 +1,5 @@
 Feature: Login user correct
-@login
+@login  @vip
   Scenario: TC02_a_Login_User_With_Correct_email_and_password
             (Dogru e-posta ve sifre ile kullanici oturum acma)
 

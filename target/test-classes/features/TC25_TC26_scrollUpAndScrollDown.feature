@@ -10,7 +10,7 @@ Feature: TC25_Verify Scroll Up using Arrow Button Scroll Down
     And kullanici yukari hareket etmek icin sag alttaki oka tiklar
     And kullanici sayfanin yukari kaydirildigini ve -practice website- text ekranda goruldugunu test eder
 
-
+  @scroll_up
   Scenario:  TC26_Verify Scroll without using Up Arrow Button Scroll Down
   (Yukari ok dugmesini kullanmadan asagi kaydirmayi dogrulama)
 

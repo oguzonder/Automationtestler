@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         // bu iki paket altinda kactane class olursa olsun,
         // herhangi bir class'da yazilan her adim diger class'lardaki adimlarla uyusursa yeni adim olusturmaya gerek kalmaz
 
-        tags="@place_order_checkout", // work in progress (@wip)
+        tags="@scroll_up", // work in progress (@wip)
         // 2-  @ testNG'degi group gibi calisir
         // eger sadece 1 Feature veya 1 Scenario calistiracaksak, gidip feature dosyasindan calistirabiliriz
         // birden fazla Feature veya Scenario calistirmak istedigimizde
